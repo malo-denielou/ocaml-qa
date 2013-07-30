@@ -1,5 +1,13 @@
 #!/bin/bash
 
+###################################################################
+# OCaml QA scripts
+# Author: Pierre-Malo Deniélou
+# License: GPLv2
+###################################################################
+# This script will try to separately link each OCaml module.
+###################################################################
+
 PACKAGES=`ocamlfind list | cut -d '(' -f 1 | xargs echo`
 MSG="=> All good "
 

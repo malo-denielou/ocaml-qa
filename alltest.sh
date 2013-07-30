@@ -1,5 +1,13 @@
 #!/bin/bash
 
+###################################################################
+# OCaml QA scripts
+# Author: Pierre-Malo Deniélou
+# License: GPLv2
+###################################################################
+# This script will try to link all installed OCaml modules together
+###################################################################
+
 PACKAGES=`ocamlfind list | cut -d '(' -f 1 | sed 's/^/-package /'| sed 's/-package camlp4.fulllib//'  | xargs echo`
 
 
